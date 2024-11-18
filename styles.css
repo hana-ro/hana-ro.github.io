@@ -9,6 +9,15 @@
     line-height: 1.5;
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #515739;
+    margin: 1em 0;
+    padding: 0;
+}
+
 .multi-para {
     display: flex;
     flex-direction: column;
