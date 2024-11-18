@@ -321,6 +321,7 @@
 .research__photo__container {
     display: flex;
     flex-direction: row;
+    padding-bottom: 20px;
 }
 
 .research__photo__item {
