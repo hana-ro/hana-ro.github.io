@@ -9,6 +9,9 @@
     line-height: 1.5;
 }
 
+p {
+    color: #515739; 
+}
 hr {
     display: block;
     height: 1px;
@@ -334,7 +337,7 @@ hr {
 }
 
 .research__photo__item {
-    margin: 10px;
+    margin: 10px; 
 }
 
 .research__photo {
