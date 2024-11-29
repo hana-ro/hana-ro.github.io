@@ -9,6 +9,9 @@
     line-height: 1.5;
 }
 
+p {
+    color: #515739; 
+}
 hr {
     display: block;
     height: 1px;
@@ -335,7 +338,7 @@ hr {
 }
 
 .research__photo__item {
-    margin: 10px;
+    margin: 10px; 
 }
 
 .research__photo {
@@ -495,7 +498,7 @@ hr {
 }
 
 .skills__programming__item__container > p {
-    margin: 6px
+    margin: 5px
 }
 
 .skills__programming__item {
@@ -729,12 +732,12 @@ hr {
 
 #back-to-top {
     position: fixed;
-    bottom: 3em;
-    right: 3em;
+    bottom: 7em;
+    right: 7em;
     background-color: #ff814f;
     color: #fff;
     border: none;
-    padding: 1.5em;
+    padding: 1em;
     border-radius: 5px;
     cursor: pointer;
     transition: all .3s ease-in-out;
