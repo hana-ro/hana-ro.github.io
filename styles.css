@@ -330,6 +330,7 @@ hr {
 .research__photo__container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding-bottom: 20px;
 }
 
