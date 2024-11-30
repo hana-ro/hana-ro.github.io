@@ -30,65 +30,79 @@ hr {
     visibility: hidden;
 }
 
+/* Navbar Styles */
 .navbar {
-    background: #ffa56a;
-    height: 70px;
+    background: #ffa56a; /* Light orange background for the navbar */
+    height: 70px; /* Set fixed height */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    position: sticky;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    font-size: 1rem; /* Default font size */
+    position: sticky; /* Keeps the navbar fixed on top */
     top: 0;
-    z-index: 999;
+    z-index: 999; /* Ensure it stays on top */
 }
 
 .navbar__container {
     display: flex;
-    justify-content: space-between;
-    height: 70px;
-    z-index: 1;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;
     width: 100%;
-    max-width: 2000px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 2000px; /* Max width for large screens */
+    margin: 0 auto; /* Center container on the page */
+    padding: 0 20px; /* Add some horizontal padding */
+    z-index: 1;
 }
 
 #navbar__logo {
-    background-color: #ffead1;
+    background-color: #ffead1; /* Light background for logo */
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    font-size: 1.8rem; /* Larger font size for logo */
+    font-weight: bold; /* Bold font for the logo */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
     display: flex;
     align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.3rem;
 }
 
 .navbar__menu {
     display: flex;
     align-items: center;
-    list-style: none;
+    list-style: none; /* Remove default list styling */
+    margin: 0;
 }
 
 .navbar__item {
     height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center text vertically */
 }
 
 .navbar__links {
-    color: #ffead1;
+    color: #ffead1; /* White color for links */
+    font-weight: 500; /* Medium weight for links */
+    font-size: 1.1rem; /* Slightly larger font size */
+    padding: 0 20px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    height: 100%;
+    transition: all 0.3s ease; /* Smooth transition on hover */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    padding: 0 20px;
-    text-decoration: none;
-    height: 100%;
-    transition: all 0.3s ease;
 }
 
+/* Navbar Links Hover Effect */
+.navbar__links:hover {
+    color: #333; /* Dark text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Button Styles */
 .navbar__btn {
     display: flex;
     justify-content: center;
@@ -96,6 +110,32 @@ hr {
     padding: 0 1rem;
     width: 100%;
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .navbar__container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        justify-content: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar__menu {
+        flex-direction: column; /* Stack menu items vertically on mobile */
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar__item {
+        margin: 10px 0; /* Add space between items on mobile */
+    }
+
+    .navbar__links {
+        padding: 10px 20px; /* Increase padding for mobile */
+        width: 100%;
+        text-align: left; /* Left-align text on mobile */
+    }
+}
+
 
 .button {
     display: flex;
@@ -277,7 +317,7 @@ hr {
 }
 
 .intro1__image {
-    height: 300px;
+    height: 325px;
     margin: 0 auto;
     border: 6px solid #515739;
     border-radius: 15rem;
@@ -428,20 +468,6 @@ hr {
     top: 64px;
 }
 
-.bccc-logo {
-    position: absolute;
-    width: 60px;
-    left: calc(50% - 30px);
-    top: 71px;
-}
-
-.bc-logo {
-    border-radius: 100%;
-    position: absolute;
-    width: 60px;
-    left: calc(50% - 30px);
-    top: 69px;
-}
 
 .time__wrapper .time__row {
     display: flex;
@@ -483,33 +509,57 @@ hr {
 
 .skills__programming__title__container {
     min-width: 300px;
-    text-align: center;
+    text-align: center; /* Center-align titles */
+    margin-bottom: 10px;
 }
 
 .skills__programming__title {
-    color: #515739;
-    font-size: 1.7rem;
+    color: #515739; /* Dark green color */
+    font-size: 1.7rem; /* Keep the original font size */
 }
 
 .skills__programming__item__container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap
-}
-
-.skills__programming__item__container > p {
-    margin: 5px
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Left-align skill items */
+    gap: 10px; /* Add gap for cleaner spacing */
 }
 
 .skills__programming__item {
     background-color: #ff814f;
     border-radius: 25px;
-    color: #515739;
+    color: #515739; /* Dark green for skill text */
     padding: 0 15px;
-    font-size: 1.7rem;
+    font-size: 1.7rem; /* Keep the original font size */
+    font-weight: normal; /* Retain normal weight */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.project__folder {
+.skills__programming__item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    background-color: #ff9a6f; /* Slightly lighter shade for hover */
+}
+
+.skills__programming__item__container > p {
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .skills__programming__item__container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Left-align items on smaller screens */
+    }
+
+    .skills__programming__item {
+        font-size: 1.7rem; /* Retain original font size */
+        padding: 6px 15px;
+    }
+}
+
+project__folder {
     display: flex;
     flex-direction: column;
     justify-content:start;
@@ -523,15 +573,22 @@ hr {
     margin: 25px;
     padding: 15px 15px 7px 15px;
     transition: all 0.3s ease-in-out;
+    justify-content: flex-start; /* Align content to the start */
+    align-items: center; /* Vertically center content (image and description) */
 }
 
-.project__container2 {
-    background-color: #474747;
+.project__item {
     display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    margin-right: 15px; /* Space between the image and description */
+}
+
+.project__image {
+    width: 240px;  /* Set a fixed width for images */
+    height: auto;  /* Maintain aspect ratio */
     border-radius: 25px;
-    margin: 25px;
-    padding: 15px 15px 7px 15px;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .project__container:hover {
@@ -753,5 +810,8 @@ hr {
 
 #back-to-top.visible {
     opacity: 1;
+}
+.project__des h3 {
+    font-weight: bold;
 }
 
